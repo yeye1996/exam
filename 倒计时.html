@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  h1{
+    color: aqua;
+    text-align: center;
+  }
+</style>
+<body onload="window.parent.location.reload();">
+  <script>
+    var now=new Date();
+var target=new Date('2019/7/06 18:00:00')
+var d=target-now
+d=Math.floor(d/1000);
+var day=Math.floor(d/(24*60*60))
+var hour=d%(24*60*60)
+hour=Math.floor(hour/3600)
+var minutes=d%3600;
+minutes=Math.floor(minutes/60)
+var seconds=d%60
+   //console.log('离放假还剩'+day+'天'+hour+'小时'+minutes+'分钟'+seconds+'秒')
+    document.write(`<h1>离下班还剩${day}天${hour}小时${minutes}分钟${seconds}秒</h1>`);
+  </script>
+</body>
+</html> 
